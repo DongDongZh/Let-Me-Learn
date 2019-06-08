@@ -1,68 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/styles/styles.css" media="screen" title="no title" charset="utf-8">
-  <title>Home Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Let Me Learn</title>
+  <!-- link to Bootstrap css -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- link to font awesome css -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <!-- link to Google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&amp;display=swap" rel="stylesheet">
+  <!-- link to our css -->
+  <link rel="stylesheet" type="text/css" href="./styles/styles.css">
 </head>
 
 <body>
-  <div id="home">
-    <div class="container">
-      <div class="row">
-        <div class="col-8 offset-2">
-          <h1>{{msg}}</h1>
-          <h2>This is our Home Page!</h2>
-          <form class="clearfix mb-4" action="POST">
-            <div class="form-group">
-              <label for="example-text">Example Text</label>
-              <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
-            </div>
-            <div class="form-group">
-              <label for="example-description">Example Description</label>
-              <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
-            </div>
-            <button id="submit" class="btn btn-primary float-right">Submit</button>
-          </form>
-          <h3>Examples:</h3>
-          <ul id="example-list" class="list-group">
-            {{#each examples}}
-            <li data-id="{{this.id}}" class="list-group-item">
-              <a href="example/{{this.id}}">{{this.text}}</a>
-              <button class="btn btn-danger float-right delete">ｘ</button>
-            </li>
-            {{/each}}
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
+  <h1>Our Homepage!</h1>
+  <!-- link to js files -->
+  <!-- Bootstrap js -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <!-- our js -->
+  <script src="./js/index.js"></script>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-8 offset-2">
-        <div class="card mt-4">
-          <div class="card-body">
-            <h5 class="card-title">Example</h5>
-            <p>
-              <strong>ID</strong>: {{example.id}}</p>
-            <p>
-            <p>
-              <strong>Text</strong>: {{example.text}}</p>
-            <p>
-              <strong>Description:</strong> {{example.description}}</p>
-              <a href="/">← Back To Home</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="/js/index.js"></script>
-  
 </body>
 
 </html>
