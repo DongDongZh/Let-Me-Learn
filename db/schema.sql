@@ -1,3 +1,0 @@
-DROP DATABASE IF EXISTS letMeLearn_db;
-
-CREATE DATABASE letMeLearn_db;
