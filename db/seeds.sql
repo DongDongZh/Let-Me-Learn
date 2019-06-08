@@ -27,5 +27,6 @@ CREATE TABLE task
 	category varchar(255) NOT null,
   description varchar(8000) NOT null,
   complete BOOLEAN default false,
+  created_at DATETIME not null defaul current_timestamp,
 	PRIMARY KEY (id)
 );
