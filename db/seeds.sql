@@ -6,7 +6,7 @@ CREATE TABLE student
 	name varchar(255) NOT NULL,
 	type varchar(255) NOT null,
 	email varchar(255) NOT null,
-  description varchar(8000) NOT null,
+  description varchar(8000),
   rating INT NOT null,
 	PRIMARY KEY (id)
 );
