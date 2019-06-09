@@ -1,6 +1,6 @@
 require("dotenv").config();
 var express = require("express");
-var exphbs = require("express-handlebars");
+// var exphbs = require("express-handlebars");
 
 var db = require("./models");
 
@@ -13,7 +13,9 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Routes
-require("./routes/apiRoutes")(app);
+require("./routes/student-api-routes")(app);
+require("./routes/teacher-api-routes")(app);
+require("./routes/task-api-routes")(app);
 require("./routes/htmlRoutes")(app);
 
 var syncOptions = { force: false };
