@@ -1,14 +1,13 @@
+
 {
   "development": {
     "username": "root",
-    "password": "Magicalpotato684",
     "database": "letMeLearn_db",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "Magicalpotato684",
     "database": "letMeLearn_db",
     "host": "localhost",
     "dialect": "mysql",
