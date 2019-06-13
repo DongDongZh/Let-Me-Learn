@@ -2,4 +2,9 @@
   display:inline-block; 
   float: left; 
   margin:0.25em; 
+  width: 45%;
+}
+
+.footer-teacher-color{
+  background-color: #343a40;
 }
