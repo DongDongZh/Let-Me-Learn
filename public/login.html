@@ -5,22 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-  <meta name="google-signin-client_id" content="211738928500-dvc17901pbbu5f1t4cl13l4ioi4jvd32.apps.googleusercontent.com">
-  <script src="https://apis.google.com/js/platform.js" async defer></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <style>
-    #g-btn{
-      margin: 200px;
-      height: 100px;
-      width: 150px;
-    }
-  </style>
   <title>Log in!</title>
 </head>
 <body>
 
-<div id="g-btn" class="g-signin2" data-onsuccess="onSignIn"></div>
+<div id="g-btn" >
+  <a href="/auth/google" >
+    Log into Google
+  </a>
+</div>
   
 </body>
 </html>
