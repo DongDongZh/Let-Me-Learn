@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Student Page -- Homepage</title>
+  <!-- link to Bootstrap css -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- link to font awesome css -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <!-- link to Google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&amp;display=swap" rel="stylesheet">
+  <!-- link to our css -->
+  <link rel="stylesheet" type="text/css" href="./styles/styles.css">
+  <style>
+    .footer-teacher-color{
+  background-color: #343a40;
+}
+  </style>
+</head>
+
+<body>
+  <div class="containers">
+    <!-- headers of student browse page -->
+    <nav class="navbar navbar-dark bg-dark">
+      <!-- Navbar content (student view) -->
+      <a href="./teacher_homepage.html">
+        <button class="btn btn-dark" type="submit">Back to Teachers Homepage</button>
+      </a>
+      <div class="col-6"></div>
+      <!-- google headshots -->
+      <div class="col-2">
+        <img src="..." class="rounded img-thumbnail float-right" alt="...">
+      </div>
+    </nav>
+    <!-- posts -->
+    <div class="container mt-3">
+    <form>
+      <div class="form-group">
+        <label for="postName">Name</label>
+        <input type="text" class="form-control" id="postTitleTeacherName" placeholder="Name">
+      </div>
+      <div class="form-group">
+        <label for="postEmail">Contact Email</label>
+        <input type="text" class="form-control" id="postTeacherEmail" placeholder="Email">
+      </div>
+      <div class="form-group">
+        <label for="categorySelect">Category</label>
+        <select class="form-control" id="categorySelectTeacher">
+          <option>Sports</option>
+          <option>Education</option>
+          <option>Trades</option>
+          <option>Random</option>
+          <option>Art</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="aboutPost">What would you like to teach.</label>
+        <textarea class="form-control" id="aboutPostTeacher" rows="10"></textarea>
+      </div>
+      <a id="teacherPost" type="submit" href="#" class="btn btn-dark">Post</a>
+    </form>
+  </div>
+  <footer id="footer-teacher-color" class="navbar fixed-bottom justify-content-center">©LML</footer>
+  <!-- Bootstrap js -->
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+  
+  <!-- our js -->
+  <script src="./js/teacherPost.js"></script>
+</body>
+
+</html>

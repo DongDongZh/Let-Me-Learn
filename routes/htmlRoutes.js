@@ -32,6 +32,13 @@ module.exports = function(app) {
       });
     });
   });
+  app.get("/students_browse", function(req, res) {
+    res.sendFile(path.join(__dirname, "/../public/student_homepage.html"));
+    db.Teacher.findAll({}).then(function(dbTeacher) {
+      res.json(dbTeacher);
+    });
+  });
+
   app.get("/student-posts", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/student_post.html"));
     db.Student.Task.findAll({}).then(function(dbTask) {
@@ -58,8 +65,8 @@ module.exports = function(app) {
       });
     });
   });
-  app.get("/teacher-post/:id", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/teacher_post.html"));
+  app.get("/teacher-post/", function(req, res) {
+    res.sendFile(path.join(__dirname, "/../public/teacher_post.html"));
     // db.Example.findOne({ where: { id: req.params.id } }).then(function(
     //   dbExample
     // ) {
@@ -70,7 +77,7 @@ module.exports = function(app) {
   });
 
   // Render 404 page for any unmatched routes
-  app.get("*", function(req, res) {
-    res.render("../public/404.html");
-  });
+  // app.get("*", function(req, res) {
+  //   res.sendFile("../public/404.html");
+  // });
 };
