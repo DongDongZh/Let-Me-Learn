@@ -28,8 +28,9 @@
     <!-- headers of student browse page -->
     <nav class="navbar navbar-dark bg-dark">
       <!-- Navbar content (student view) -->
-      <a href="./teacher_homepage.html">
-        <button class="btn btn-dark" type="submit">Back to Teachers Homepage</button>
+      <a href = "./teacher_homepage.html" class="fas fa-home"></a>
+      <a href="./teacher_post.html">
+        <button class="btn btn-dark" type="submit">Update Profile</button>
       </a>
       <div class="col-6"></div>
       <!-- google headshots -->
@@ -62,10 +63,12 @@
         <label for="aboutPost">What would you like to teach.</label>
         <textarea class="form-control" id="aboutPostTeacher" rows="10"></textarea>
       </div>
-      <a id="teacherPost" type="submit" href="#" class="btn btn-dark">Post</a>
+      <input id="teacherPost" type="submit" href="./teacher_homepage.html" class="btn btn-dark">
+      <br>
+      <br>
     </form>
   </div>
-  <footer id="footer-teacher-color" class="navbar fixed-bottom justify-content-center">©LML</footer>
+  <footer class="navbar navbar-light bg-dark fixed-bottom justify-content-center">©LML</footer>
   <!-- Bootstrap js -->
   <script
   src="https://code.jquery.com/jquery-3.4.1.js"
