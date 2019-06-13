@@ -26,7 +26,6 @@ module.exports = function(app) {
     db.Teacher.create(req.body).then(function(dbTeacher) {
       res.json(dbTeacher);
       console.log(dbTeacher);
-      
     });
   });
 

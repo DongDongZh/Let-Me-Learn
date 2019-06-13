@@ -1,17 +1,14 @@
-$(document).ready(function () {
-
+$(document).ready(function() {
   var queryURL = "/api/teachers";
 
   $.ajax({
     url: queryURL,
     method: "GET"
-  }).then(function (response) {
+  }).then(function(response) {
+    console.log(response);
+    var key;
 
-      console.log(response);
-      var key;
-     
-      for ( key in response) {
-        
+    for (key in response) {
       console.log(response[key].name);
 
       var cardDiv = $("<div>").addClass("card");
@@ -20,7 +17,6 @@ $(document).ready(function () {
       var cardTitle = $("<div>").addClass("card-title");
       var cardText = $("<div>").addClass("card-text");
 
-      
       cardHeader.text(response[key].name);
       cardTitle.text(response[key].email);
       cardText.text(response[key].description);
@@ -30,8 +26,6 @@ $(document).ready(function () {
       $(".card").append(cardBody);
       $(".card-body").html(cardTitle);
       $(".card-title").append(cardText);
-  
-
-      };
-    });
+    }
+  });
 });

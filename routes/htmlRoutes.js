@@ -38,7 +38,7 @@ module.exports = function(app) {
       res.json(dbTeacher);
     });
   });
-  
+
   app.get("/student-posts", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/student_post.html"));
     db.Student.Task.findAll({}).then(function(dbTask) {
