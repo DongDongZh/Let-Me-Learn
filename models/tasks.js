@@ -9,8 +9,8 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     },
     subject: {
-      type: DataTypes.STRING,
-      allowNull: false
+      type: DataTypes.BOOLEAN,
+      defaultValue: true
     },
     description: {
       type: DataTypes.TEXT,
