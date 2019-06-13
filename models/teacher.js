@@ -12,6 +12,10 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.TEXT,
       allowNull: false
     },
+    // category: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    // },
     rating: {
       type: DataTypes.INTEGER,
       defaultValue: 5
