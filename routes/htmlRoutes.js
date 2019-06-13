@@ -37,9 +37,9 @@ module.exports = function (app) {
     });
   });
 
-  app.get("/student-posts", function (req, res) {
-    res.sendFile(path.join(__dirname, "/../public/student_post.html"));
-    db.Student.Task.findAll({}).then(function (dbTask) {
+  app.get("/student_posts", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/student_post.html"));
+    db.Student.Task.findAll({}).then(function(dbTask) {
       res.render("student_browse", {
         task: dbTask
       });
@@ -63,7 +63,9 @@ module.exports = function (app) {
       });
     });
   });
-  app.get("/teacher-post/", function (req, res) {
+
+  app.get("/teacher_post/", function(req, res) {
+
     res.sendFile(path.join(__dirname, "/../public/teacher_post.html"));
     // db.Example.findOne({ where: { id: req.params.id } }).then(function(
     //   dbExample
