@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Teacher Page -- Homepage</title>
+  <title>Student Page -- Homepage</title>
   <!-- link to Bootstrap css -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -19,21 +19,26 @@
 </head>
 
 <body>
-  <div class="containers">
-    <!-- headers of student browse page -->
-    <nav class="navbar navbar-dark bg-dark">
-      <!-- Navbar content (student view) -->
-      <a href = "./teacher_homepage.html" class="fas fa-home"></a>
-      <a href="./teacher_post.html">
-        <button class="btn btn-dark" type="submit">Update Profile</button>
-      </a>
-      <div class="col-6"></div>
-      <!-- google headshots -->
-      <div class="col-2">
-        <img src="..." class="rounded img-thumbnail float-right" alt="...">
-      </div>
-    </nav>
-    <!-- posts -->
+  <!-- headers of student browse page -->
+  <nav class="navbar navbar-dark bg-primary">
+    <!-- Navbar content -->
+    <a href="./teacher_browse.html">
+      <button class="btn btn-primary" type="submit">Browse Teachers</button>
+    </a>
+    <a href="./student_post.html">
+      <button class="btn btn-primary" type="submit">Create Post</button>
+    </a>
+    <a href="./auth/logout">
+      <button class="btn btn-primary" type="submit">logout</button>
+    </a>
+    <div class="col-6"></div>
+    <!-- google headshots -->
+    <div class="col-2">
+      <img src="..." class="rounded img-thumbnail float-right" alt="...">
+    </div>
+  </nav>
+  <!-- posts -->
+  <div class="container">
     <div class="card">
       <div class="card-header">
         Type of Skills (e.g. Sports)
@@ -41,7 +46,7 @@
       <div class="card-body">
         <h5 class="card-title">Special title treatment</h5>
         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-dark">Go somewhere</a>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
     </div>
     <div class="card">
@@ -51,7 +56,7 @@
       <div class="card-body">
         <h5 class="card-title">Special title treatment</h5>
         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-dark">Go somewhere</a>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
     </div>
     <div class="card">
@@ -61,7 +66,7 @@
       <div class="card-body">
         <h5 class="card-title">Special title treatment</h5>
         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-dark">Go somewhere</a>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
     </div>
     <div class="card">
@@ -71,17 +76,23 @@
       <div class="card-body">
         <h5 class="card-title">Special title treatment</h5>
         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-dark">Go somewhere</a>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
     </div>
   </div>
-  <!-- jquery -->
-  <script
-  src="https://code.jquery.com/jquery-3.4.1.js"
-  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-  crossorigin="anonymous"></script>
+  <footer class="navbar navbar-light bg-primary fixed-bottom justify-content-center">©LML</footer>
+  <!-- Bootstrap js -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
   <!-- our js -->
-  <script src="./js/index.js"></script>
+  <script src="./js/studentBrowse.js"></script>
 </body>
 
 </html>
