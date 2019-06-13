@@ -20,7 +20,7 @@ module.exports = function(sequelize, DataTypes) {
 
   Student.associate = function(models) {
     Student.hasMany(models.Task, {
-      // onDelete: "cascade"
+      onDelete: "cascade"
     });
   };
   return Student;
