@@ -18,6 +18,7 @@ module.exports = function (app) {
     req,
     res
   ) {
-    res.send("you reached the callback");
+    console.log("callback reached.");
+    res.send("student_homepage.html");
   });
 };
