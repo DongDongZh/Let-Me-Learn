@@ -21,13 +21,6 @@ module.exports = function(app) {
     });
   });
 
-  // Create a new student
-  app.post("/api/students", function(req, res) {
-    db.Student.create(req.body).then(function(dbStudent) {
-      res.json(dbStudent);
-    });
-  });
-
   // Delete an student by id
   app.delete("/api/students/:id", function(req, res) {
     db.Student.destroy({
