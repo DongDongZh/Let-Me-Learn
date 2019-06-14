@@ -8,9 +8,8 @@
   },
   "test": {
     "username": "root",
-    "database": "testdb",
-    "host": "127.0.0.1",
-    "password": "",
+    "database": "letMeLearn_db",
+    "host": "localhost",
     "dialect": "mysql",
     "logging": false
   },
