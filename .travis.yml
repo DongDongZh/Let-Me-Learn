@@ -7,5 +7,7 @@ cache:
   directories:
     - node_modules
     - .env
+services:
+  - mysql
 before_install:
-  - mysql -e 'CREATE DATABASE letMeLearn_db;'
+  - mysql -e 'CREATE DATABASE testdb;'
