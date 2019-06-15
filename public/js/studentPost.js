@@ -10,14 +10,21 @@ $(function () {
       description: $("#aboutPost").val().trim()
     };
     // Send the POST request.
-    $.ajax("/api/tasks", {
-      type: "POST",
-      data: newTask
-    }).then(function (result) {
-      console.log("Created new task");
-      console.log(result);
-      // Reload the page to get the updated list
-      location.reload();
-    }); 
+    if (newTask.name === "" ||
+      newTask.category === "" ||
+      newTask.description === "") {
+      alert("Please Enter All Fields");
+    }
+    else {
+      $.ajax("/api/tasks", {
+        type: "POST",
+        data: newTask
+      }).then(function (result) {
+        console.log("Created new task");
+        console.log(result);
+        // Reload the page to get the updated list
+        location.reload();
+      });
+    }
   });
 });
