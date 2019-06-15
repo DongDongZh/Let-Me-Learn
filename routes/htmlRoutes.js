@@ -29,7 +29,14 @@ module.exports = function (app) {
     res.render("student_post");
   });
   app.get("/teachers", function (req, res) {
+<<<<<<< Updated upstream
     res.render("teacher_browse");
+=======
+    res.sendFile(path.join(__dirname, "../public/teacher_homepage.html"));
+    db.Teacher.findAll({}).then(function (dbTeacher) {
+      res.json(dbTeacher);
+    });
+>>>>>>> Stashed changes
   });
   // app.get("/teachers/:id", function (req, res) {
   //   res.sendFile(path.join(__dirname, "/../public/teacher_browse.html"));
