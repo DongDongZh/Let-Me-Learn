@@ -18,7 +18,11 @@ module.exports = function (app) {
     req,
     res
   ) {
-    console.log("callback reached.");
-    res.send("student_homepage.html");
+    var loggedInUser = res.req.user.profile;
+    console.log("Name: " + loggedInUser.displayName);
+    console.log("Email: " + loggedInUser._json.email);
+    console.log("Photo: " + loggedInUser._json.picture);
+    console.log("GoogleId: " + loggedInUser.id);
+    res.redirect("/students");
   });
 };
