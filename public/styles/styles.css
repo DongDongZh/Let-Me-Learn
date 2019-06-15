@@ -16,3 +16,7 @@
 .card_teacher{
   width: 18em; 
 }
+
+.index_page{
+  background-image: url(assets/email-pattern.png); 
+}
