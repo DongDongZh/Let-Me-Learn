@@ -55,7 +55,7 @@ module.exports = function (app) {
   });
 
   app.get("/", function(req, res) {
-    
+    res.render("index");
     if (req.session.token) {
       res.cookie("token", req.session.token);
     } else {

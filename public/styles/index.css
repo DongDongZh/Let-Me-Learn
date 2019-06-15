@@ -8,9 +8,52 @@ html {
 
 }
 
-body{
+.index{
  background-color: rgba(255, 255, 255, 0.836);
  margin-top: 20vh;
 }
 
+.footer-teacher-color{
+  background-color: #343a40;
+}
 
+.fa-home{
+  color:white; 
+}
+
+.card_teacher{
+  width: 18em; 
+}
+
+.index_page{
+  background-image: url(assets/email-pattern.png); 
+}
+
+.text{
+  color: whitesmoke;
+}
+
+.card{
+  display:inline-block; 
+  float: left; 
+  margin:0.25em; 
+  width: 45%;
+  -webkit-box-shadow: 0 8px 6px -6px black;
+	-moz-box-shadow: 0 8px 6px -6px black;
+	box-shadow: 0 8px 6px -6px black;
+}
+
+.card-header{
+ font-size: 35px
+}
+
+.card-email{
+background-color: rgba(255, 0, 0, 0.432);
+padding: 5px;
+border-radius: 8px;
+cursor: pointer;
+}
+
+.card-email:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 40px 0 rgba(0,0,0,0.19);
+}
