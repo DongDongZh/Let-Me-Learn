@@ -10,17 +10,25 @@ module.exports = function(sequelize, DataTypes) {
     },
     description: {
       type: DataTypes.TEXT,
-      allowNull: false
+      allowNull: true
     },
     rating: {
       type: DataTypes.INTEGER,
       defaultValue: 5
+    },
+    image: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    googleId: {
+      type: DataTypes.STRING,
+      allowNull: false
     }
   });
 
   Student.associate = function(models) {
     Student.hasMany(models.Task, {
-      // onDelete: "cascade"
+      onDelete: "cascade"
     });
   };
   return Student;
