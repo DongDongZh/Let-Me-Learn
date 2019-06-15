@@ -22,7 +22,7 @@
   <!-- headers of student browse page -->
   <nav class="navbar navbar-dark bg-primary">
     <!-- Navbar content -->
-    <a href = "./student_homepage.html" class="fas fa-home"></a>
+    <a href="./student_homepage.html" class="fas fa-home"></a>
     <a href="./teacher_browse.html">
       <button class="btn btn-primary" type="submit">Browse Teachers</button>
     </a>
@@ -31,21 +31,25 @@
     </a>
     <div class="col-6"></div>
     <!-- google headshots -->
-    <div class="col-2">
+    <div class="col-1">
       <img src="..." class="rounded img-thumbnail float-right" alt="...">
+    </div>
+    <!-- logout button -->
+    <div class="col-1">
+      <a href="/auth/logout">
+        <button class="btn btn-primary" type="submit">Logout</button>
+      </a>
     </div>
   </nav>
   <!-- posts -->
   <div id="pageContainer" class="container">
-    
+
   </div>
   <footer class="navbar navbar-light bg-primary fixed-bottom justify-content-center">©LML</footer>
- 
+
   <!-- jquery -->
-  <script
-  src="https://code.jquery.com/jquery-3.4.1.js"
-  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
   <!-- our js -->
   <script src="./js/studentBrowse.js"></script>
 </body>

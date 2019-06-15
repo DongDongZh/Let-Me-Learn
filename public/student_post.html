@@ -19,43 +19,52 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-dark bg-primary">
-    <!-- Navbar content -->
-    <a href="./student_homepage.html" class="fas fa-home"></a>
-    <a href="./teacher_browse.html">
-      <button class="btn btn-primary" type="submit">Browse Teachers</button>
-    </a>
-    <a href="./student_post.html">
-      <button class="btn btn-primary" type="submit">Create Post</button>
-    </a>
-    <div class="col-6"></div>
-    <!-- google headshots -->
-    <div class="col-2">
-      <img src="..." class="rounded img-thumbnail float-right" alt="...">
+  <div class="containers">
+    <!-- headers of student browse page (student view)-->
+    <nav class="navbar navbar-dark bg-primary">
+      <!-- Navbar content -->
+      <a href="./student_homepage.html" class="fas fa-home"></a>
+      <a href="./teacher_browse.html">
+        <button class="btn btn-primary" type="submit">Browse Teachers</button>
+      </a>
+      <a href="./student_post.html">
+        <button class="btn btn-primary" type="submit">Create Post</button>
+      </a>
+      <div class="col-6"></div>
+      <!-- google headshots -->
+      <div class="col-1">
+        <img src="..." class="rounded img-thumbnail float-right" alt="...">
+      </div>
+      <!-- logout button -->
+      <div class="col-1">
+        <a href="/auth/logout">
+          <button class="btn btn-primary" type="submit">Logout</button>
+        </a>
+      </div>
+    </nav>
+    <div class="container mt-3">
+      <form>
+        <div class="form-group">
+          <label for="postTitle">Title</label>
+          <input type="text" class="form-control" id="postTitle" placeholder="Title">
+        </div>
+        <div class="form-group">
+          <label for="categorySelect">Category</label>
+          <select class="form-control" id="categorySelect">
+            <option>Sports</option>
+            <option>Education</option>
+            <option>Trades</option>
+            <option>Random</option>
+            <option>Art</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="aboutPost">A few words to explain.</label>
+          <textarea class="form-control" id="aboutPost" rows="10"></textarea>
+        </div>
+        <input class="btn btn-primary" type="submit" value="Submit" id="studentSubmit">
+      </form>
     </div>
-  </nav>
-  <div class="container mt-3">
-    <form>
-      <div class="form-group">
-        <label for="postTitle">Title</label>
-        <input type="text" class="form-control" id="postTitle" placeholder="Title">
-      </div>
-      <div class="form-group">
-        <label for="categorySelect">Category</label>
-        <select class="form-control" id="categorySelect">
-          <option>Sports</option>
-          <option>Education</option>
-          <option>Trades</option>
-          <option>Random</option>
-          <option>Art</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="aboutPost">A few words to explain.</label>
-        <textarea class="form-control" id="aboutPost" rows="10"></textarea>
-      </div>
-      <input class="btn btn-primary" type="submit" value="Submit" id="studentSubmit">
-    </form>
   </div>
   <footer class="navbar navbar-light bg-primary fixed-bottom justify-content-center">©LML</footer>
   <!-- Bootstrap js -->
