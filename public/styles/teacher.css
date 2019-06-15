@@ -1,0 +1,20 @@
+html{
+  background: url("./img/noisy_grid_@2X.png") repeat center center fixed; 
+}
+
+.containers{
+  background: url("./img/noisy_grid_@2X.png") repeat center center fixed; 
+}
+
+#pageContainer{
+  margin-top:1em; 
+  margin-bottom:55em; 
+}
+
+.container{
+  margin-bottom:5em; 
+}
+
+footer{
+  color:white; 
+}
