@@ -11,7 +11,7 @@ $(document).ready(function() {
     for (key in response) {
       console.log(response[key].name);
 
-      var cardDiv = $("<div>").addClass("card");
+      var cardDiv = $("<div>").addClass("card card_teacher");
       var cardHeader = $("<div>").addClass("card-header");
       var cardBody = $("<div>").addClass("card-body");
       var cardTitle = $("<div>").addClass("card-title");
@@ -23,7 +23,7 @@ $(document).ready(function() {
 
       cardBody.append([cardTitle,cardEmail]);
       cardDiv.append([cardHeader,cardBody]);
-      $("#pageContainer").append(cardDiv);
+      $("#pageContainer").prepend(cardDiv);
     }
   });
 });

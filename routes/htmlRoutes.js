@@ -1,6 +1,5 @@
 var db = require("../models");
 var path = require("path");
-require("./googleRoutes/auth-routes.js");
 
 module.exports = function (app) {
   // Load index page
@@ -11,7 +10,7 @@ module.exports = function (app) {
   // Load example page and pass in an example by id
   app.get("/students", function (req, res) {
     res.sendFile(path.join(__dirname, "/../public/student_homepage.html"));
-    db.Student.findAll({}).then(function (dbStudent) {
+    db.Task.findAll({}).then(function (dbStudent) {
       res.json(dbStudent);
     });
   });
@@ -31,21 +30,19 @@ module.exports = function (app) {
       res.json(dbTeacher);
     });
   });
-
-  app.get("/student_posts", function(req, res) {
+  
+  app.get("/student_posts", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/student_post.html"));
-    db.Student.Task.findAll({}).then(function(dbTask) {
+    db.Student.Task.findAll({}).then(function (dbTask) {
       res.render("student_browse", {
         task: dbTask
       });
     });
   });
   app.get("/teachers", function (req, res) {
-    res.sendFile(path.join(__dirname, "/../public/teacher_browse.html"));
+    res.sendFile(path.join(__dirname, "../public/teacher_homepage.html"));
     db.Teacher.findAll({}).then(function (dbTeacher) {
-      res.render("student_browse", {
-        teacher: dbTeacher
-      });
+      res.json(dbTeacher);
     });
   });
   app.get("/teachers/:id", function (req, res) {
@@ -59,7 +56,7 @@ module.exports = function (app) {
     });
   });
 
-  app.get("/teacher_post/", function(req, res) {
+  app.get("/teacher_post/", function (req, res) {
 
     res.sendFile(path.join(__dirname, "/../public/teacher_post.html"));
     // db.Example.findOne({ where: { id: req.params.id } }).then(function(
@@ -75,4 +72,8 @@ module.exports = function (app) {
   // app.get("*", function(req, res) {
   //   res.sendFile("../public/404.html");
   // });
+  app.get("/teacher_profile", function (req, res) {
+    res.sendFile(path.join(__dirname, "/../public/teacher_profiles.html"));
+  }); 
 };
+
