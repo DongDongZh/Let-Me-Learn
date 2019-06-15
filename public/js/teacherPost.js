@@ -22,7 +22,7 @@ $("#teacherPost").on("click", function(event) {
     newTeacher.email === "" ||
     newTeacher.description === ""
   ) {
-    alert("Please Enter All Feilds");
+    alert("Please Enter All Fields");
   } else {
     // Send the POST request.
     $.ajax("/api/teachers", {

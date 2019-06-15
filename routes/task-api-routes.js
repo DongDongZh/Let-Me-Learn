@@ -28,6 +28,7 @@ module.exports = function(app) {
   // POST route for saving a new post
   app.post("/api/tasks", function(req, res) {
     db.Task.create(req.body).then(function(dbTask) {
+      // console.log(dbTask);
       res.json(dbTask);
     });
   });
