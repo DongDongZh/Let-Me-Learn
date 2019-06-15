@@ -32,6 +32,7 @@ $("#teacherPost").on("click", function(event) {
       console.log("created new teacher");
       // Reload the page to get the updated list
       location.reload();
+      window.location.href = "/teacher_profile";
     });
   }
 });
