@@ -15,13 +15,13 @@ $(document).ready(function() {
       var cardHeader = $("<div>").addClass("card-header");
       var cardBody = $("<div>").addClass("card-body");
       var cardTitle = $("<div>").addClass("card-title");
-      var cardText = $("<div>").addClass("card-text");
+      var cardEmail = $("<div>").addClass("card-email");
 
       cardHeader.text(response[key].name);
-      cardTitle.text(response[key].email);
-      cardText.text(response[key].description);
+      cardTitle.text(response[key].description);
+      cardEmail.text(response[key].email);
 
-      cardBody.append([cardTitle,cardText]);
+      cardBody.append([cardTitle,cardEmail]);
       cardDiv.append([cardHeader,cardBody]);
       $("#pageContainer").append(cardDiv);
     }

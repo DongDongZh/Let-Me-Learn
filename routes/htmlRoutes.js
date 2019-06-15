@@ -1,5 +1,6 @@
 var db = require("../models");
 var path = require("path");
+require("./googleRoutes/auth-routes.js");
 
 module.exports = function (app) {
   // Load index page

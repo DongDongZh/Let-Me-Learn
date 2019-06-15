@@ -12,15 +12,15 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static("public"));
 
+// START GOOGS STUFF ----------------------------------------------------------------------/
+require("./config/passport-setup.js")(app);
+require("./routes/googleRoutes/auth-routes.js")(app);
+// END GOOGLE STUFF -------------------------------------------------------------------------------/
 // Routes
 require("./routes/student-api-routes")(app);
 require("./routes/teacher-api-routes")(app);
 require("./routes/task-api-routes")(app);
 require("./routes/htmlRoutes")(app);
-// START GOOGS STUFF ----------------------------------------------------------------------/
-require("./config/passport-setup.js")(app);
-require("./routes/googleRoutes/auth-routes.js")(app);
-// END GOOGLE STUFF -------------------------------------------------------------------------------/
 var syncOptions = { force: false };
 
 // If running a test, set syncOptions.force to true
