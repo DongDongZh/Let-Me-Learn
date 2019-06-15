@@ -1,6 +1,5 @@
 $(document).ready(function () {
   var queryURL = "/api/tasks";
-
   $.ajax({
     url: queryURL,
     method: "GET"
