@@ -42,11 +42,30 @@ module.exports = function (app) {
               console.log(response);
             });
           }
+          
         });
-        // return done to go to call back 
-        return done(null, {
-          profile: profile,
-          token: accessToken
+        db.Teacher.findOne({
+          where: {
+            googleId: profile.id
+          }
+        }).then(function(existingTeacher) {
+          if (existingTeacher) {
+            console.log(existingTeacher.name + "already a teacher.");
+          }else {
+            db.Teacher.create({
+              name: profile.displayName,
+              email: profile._json.email,
+              image: profile._json.picture,
+              googleId: profile.id
+            }).then(function (response) {
+              console.log(response);
+            });
+          }
+          // return done to go to call back 
+          return done(null, {
+            profile: profile,
+            token: accessToken
+          });
         });
       }
     )
