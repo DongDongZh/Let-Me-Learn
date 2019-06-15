@@ -17,9 +17,9 @@
   <!-- link to our css -->
   <link rel="stylesheet" type="text/css" href="./styles/styles.css">
   <style>
-    .footer-teacher-color{
-  background-color: #343a40;
-}
+    .footer-teacher-color {
+      background-color: #343a40;
+    }
   </style>
 </head>
 
@@ -28,7 +28,7 @@
     <!-- headers of student browse page -->
     <nav class="navbar navbar-dark bg-dark">
       <!-- Navbar content (student view) -->
-      <a href = "./teacher_homepage.html" class="fas fa-home"></a>
+      <a href="./teacher_homepage.html" class="fas fa-home"></a>
       <a href="./teacher_post.html">
         <button class="btn btn-dark" type="submit">Update Profile</button>
       </a>
@@ -37,49 +37,53 @@
       </a>
       <div class="col-6"></div>
       <!-- google headshots -->
-      <div class="col-2">
+      <div class="col-1">
         <img src="..." class="rounded img-thumbnail float-right" alt="...">
+      </div>
+      <!-- logout button -->
+      <div class="col-1">
+        <a href="/auth/logout">
+          <button class="btn btn-dark" type="submit">Logout</button>
+        </a>
       </div>
     </nav>
     <!-- posts -->
     <div class="container mt-3">
-    <form>
-      <div class="form-group">
-        <label for="postName">Name</label>
-        <input type="text" class="form-control" id="postTitleTeacherName" placeholder="Name">
-      </div>
-      <div class="form-group">
-        <label for="postEmail">Contact Email</label>
-        <input type="text" class="form-control" id="postTeacherEmail" placeholder="Email">
-      </div>
-      <div class="form-group">
-        <label for="categorySelect">Category</label>
-        <select class="form-control" id="categorySelectTeacher">
-          <option>Sports</option>
-          <option>Education</option>
-          <option>Trades</option>
-          <option>Random</option>
-          <option>Art</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="aboutPost">What would you like to teach.</label>
-        <textarea class="form-control" id="aboutPostTeacher" rows="10"></textarea>
-      </div>
-      <input id="teacherPost" type="submit" href="./teacher_homepage.html" class="btn btn-dark">
-      <br>
-      <br>
-    </form>
-  </div>
-  <footer class="navbar navbar-light bg-dark fixed-bottom justify-content-center">©LML</footer>
-  <!-- Bootstrap js -->
-  <script
-  src="https://code.jquery.com/jquery-3.4.1.js"
-  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-  crossorigin="anonymous"></script>
-  
-  <!-- our js -->
-  <script src="./js/teacherPost.js"></script>
+      <form>
+        <div class="form-group">
+          <label for="postName">Name</label>
+          <input type="text" class="form-control" id="postTitleTeacherName" placeholder="Name">
+        </div>
+        <div class="form-group">
+          <label for="postEmail">Contact Email</label>
+          <input type="text" class="form-control" id="postTeacherEmail" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <label for="categorySelect">Category</label>
+          <select class="form-control" id="categorySelectTeacher">
+            <option>Sports</option>
+            <option>Education</option>
+            <option>Trades</option>
+            <option>Random</option>
+            <option>Art</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="aboutPost">What would you like to teach.</label>
+          <textarea class="form-control" id="aboutPostTeacher" rows="10"></textarea>
+        </div>
+        <input id="teacherPost" type="submit" href="./teacher_homepage.html" class="btn btn-dark">
+        <br>
+        <br>
+      </form>
+    </div>
+    <footer class="navbar navbar-light bg-dark fixed-bottom justify-content-center">©LML</footer>
+    <!-- Bootstrap js -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+    <!-- our js -->
+    <script src="./js/teacherPost.js"></script>
 </body>
 
 </html>
