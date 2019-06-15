@@ -24,7 +24,7 @@ $(function () {
         console.log(result);
         // Reload the page to get the updated list
         location.reload();
-        window.location.href = "/students"; 
+        window.location.href = "/students";
       });
     }
   });

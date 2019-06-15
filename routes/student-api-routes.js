@@ -22,10 +22,10 @@ module.exports = function(app) {
   });
 
   // Delete an student by id
-  app.delete("/api/students/:id", function(req, res) {
+  app.delete("/api/students/:email", function(req, res) {
     db.Student.destroy({
       where: {
-        id: req.params.id
+        email: req.params.email
       }
     }).then(function(dbStudent) {
       res.json(dbStudent);
