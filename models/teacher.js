@@ -10,22 +10,26 @@ module.exports = function(sequelize, DataTypes) {
     },
     description: {
       type: DataTypes.TEXT,
-      allowNull: false
+      allowNull: true
     },
-    // category: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false,
-    // },
     rating: {
       type: DataTypes.INTEGER,
       defaultValue: 5
+    },
+    image: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    googleId: {
+      type: DataTypes.STRING,
+      allowNull: false
     }
   });
 
-  Teacher.associate = function(models) {
-    Teacher.hasMany(models.Student, {
-      onDelete: "cascade"
-    });
-  };
+  // Teacher.associate = function(models) {
+  //   Teacher.hasMany(models.Student, {
+  //     onDelete: "cascade"
+  //   });
+  // };
   return Teacher;
 };
