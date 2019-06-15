@@ -5,6 +5,7 @@ var db = require("../models");
 
 module.exports = function (app) {
   app.use(passport.initialize());
+ 
   passport.serializeUser(function (user, done) {
     done(null, user);
   });
@@ -21,11 +22,11 @@ module.exports = function (app) {
       },
       function (accessToken, refreshToken, profile, done) {
         //pass call back func
-        console.log("passport call back fired");
-        console.log(profile.displayName);
-        console.log(profile._json.email);
-        console.log(profile._json.picture);
-        console.log(profile.id);
+        // console.log("passport call back fired");
+        // console.log(profile.displayName);
+        // console.log(profile._json.email);
+        // console.log(profile._json.picture);
+        // console.log(profile.id);
         //search to see if user exists
         db.Student.findOne({
           where: {
