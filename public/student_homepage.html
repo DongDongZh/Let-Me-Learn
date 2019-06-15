@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Teacher Page -- Homepage</title>
+  <title>Student Page -- Homepage</title>
   <!-- link to Bootstrap css -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -19,37 +19,39 @@
 </head>
 
 <body>
-  <div class="containers">
-    <!-- headers of student browse page -->
-    <nav class="navbar navbar-dark bg-dark">
-      <!-- Navbar content (student view) -->
-      <a href="./teacher_homepage.html" class="fas fa-home"></a>
-      <a href="./teacher_post.html">
-        <button class="btn btn-dark" type="submit">Update Profile</button>
+  <!-- headers of student browse page -->
+  <nav class="navbar navbar-dark bg-primary">
+    <!-- Navbar content -->
+    <a href="./student_homepage.html" class="fas fa-home"></a>
+    <a href="./teacher_browse.html">
+      <button class="btn btn-primary" type="submit">Browse Teachers</button>
+    </a>
+    <a href="./student_post.html">
+      <button class="btn btn-primary" type="submit">Create Post</button>
+    </a>
+    <div class="col-6"></div>
+    <!-- google headshots -->
+    <div class="col-1">
+      <img src="..." class="rounded img-thumbnail float-right" alt="...">
+    </div>
+    <!-- logout button -->
+    <div class="col-1">
+      <a href="/auth/logout">
+        <button class="btn btn-primary" type="submit">Logout</button>
       </a>
-      <a href="./teacher_profiles.html">
-        <button class="btn btn-dark" type="submit">All Teachers Profile</button>
-      </a>
-      <div class="col-6"></div>
-      <!-- google headshots -->
-      <div class="col-1">
-        <img src="..." class="rounded img-thumbnail float-right" alt="...">
-      </div>
-      <!-- logout button -->
-      <div class="col-1">
-        <a href="/auth/logout">
-          <button class="btn btn-dark" type="submit">Logout</button>
-        </a>
-      </div>
-    </nav>
-  </div>
+    </div>
+  </nav>
   <!-- posts -->
-  <div id="pageContainer" class="container"></div>
+  <div id="pageContainer" class="container">
+
+  </div>
+  <footer class="navbar navbar-light bg-primary fixed-bottom justify-content-center">©LML</footer>
+
   <!-- jquery -->
   <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
     crossorigin="anonymous"></script>
   <!-- our js -->
-  <script src="./js/teacherHome.js"></script>
+  <script src="./js/studentBrowse.js"></script>
 </body>
 
 </html>

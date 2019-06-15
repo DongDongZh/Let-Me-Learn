@@ -32,5 +32,10 @@ $(document).ready(function () {
       $("#pageContainer").prepend(cardDiv);
     
     }
+
+    //on click event: when clicking on the email button, send off the email
+    // $(".card-email").on("click",function(event){
+    //   event.preventDefault(); 
+    // }); 
   });
 });
