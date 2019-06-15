@@ -5,6 +5,7 @@ var db = require("../models");
 
 module.exports = function (app) {
   app.use(passport.initialize());
+  app.use(passport.session());
  
   passport.serializeUser(function (user, done) {
     done(null, user);
@@ -21,12 +22,6 @@ module.exports = function (app) {
         callbackURL: process.env.GOOGLEURL
       },
       function (accessToken, refreshToken, profile, done) {
-        //pass call back func
-        // console.log("passport call back fired");
-        // console.log(profile.displayName);
-        // console.log(profile._json.email);
-        // console.log(profile._json.picture);
-        // console.log(profile.id);
         //search to see if user exists
         db.Student.findOne({
           where: {

@@ -1,6 +1,5 @@
 var db = require("../models");
 var path = require("path");
-require("./googleRoutes/auth-routes.js");
 
 module.exports = function (app) {
   // Load index page
@@ -11,7 +10,7 @@ module.exports = function (app) {
   // Load example page and pass in an example by id
   app.get("/students", function (req, res) {
     res.sendFile(path.join(__dirname, "/../public/student_homepage.html"));
-    db.Student.findAll({}).then(function (dbStudent) {
+    db.Task.findAll({}).then(function (dbStudent) {
       res.json(dbStudent);
     });
   });
@@ -31,7 +30,7 @@ module.exports = function (app) {
       res.json(dbTeacher);
     });
   });
-
+  
   app.get("/student_posts", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/student_post.html"));
     db.Student.Task.findAll({}).then(function (dbTask) {

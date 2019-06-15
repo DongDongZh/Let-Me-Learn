@@ -9,6 +9,7 @@ module.exports = function (app) {
   }));
   app.use(cookieParser());
 
+
   app.get(
     "/auth/google",
     passport.authenticate("google", {
@@ -32,22 +33,33 @@ module.exports = function (app) {
     console.log("Email: " + loggedInUser._json.email);
     console.log("Photo: " + loggedInUser._json.picture);
     console.log("GoogleId: " + loggedInUser.id);
+    // set a cookie
+    app.use(function (req, res, next) {
+      // check if client sent cookie
+      var cookie = req.cookies.cookieName;
+      if (cookie === undefined)
+      {
+        // no: set a new cookie
+        res.cookie("User Cookie", loggedInUser.id, { maxAge: 900000, httpOnly: true });
+        console.log("cookie created successfully");
+      } 
+      else
+      {
+        // yes, cookie was already present 
+        console.log("cookie exists", cookie);
+      } 
+      next(); // <-- important!
+    });
     req.session.token = req.user.token;
     res.redirect("/students");
   });
 
   app.get("/", function(req, res) {
-    console.log("why wont this log");
+    
     if (req.session.token) {
       res.cookie("token", req.session.token);
-      res.json({
-        status: "session cookie set"
-      });
     } else {
       res.cookie("token", "");
-      res.json({
-        status: "session cookie not set"
-      });
     }
   });
 };
