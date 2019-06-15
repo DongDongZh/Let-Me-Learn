@@ -1,10 +1,10 @@
-$(document).ready(function() {
+$(document).ready(function () {
   var queryURL = "/api/teachers";
 
   $.ajax({
     url: queryURL,
     method: "GET"
-  }).then(function(response) {
+  }).then(function (response) {
     console.log(response);
     var key;
 
@@ -21,9 +21,14 @@ $(document).ready(function() {
       cardTitle.text(response[key].description);
       cardEmail.text(response[key].email);
 
-      cardBody.append([cardTitle,cardEmail]);
-      cardDiv.append([cardHeader,cardBody]);
+      cardBody.append([cardTitle, cardEmail]);
+      cardDiv.append([cardHeader, cardBody]);
       $("#pageContainer").prepend(cardDiv);
     }
+
+    //on click event: when clicking on the email button, send off the email
+    // $(".card-email").on("click",function(event){
+    //   event.preventDefault(); 
+    // }); 
   });
 });
