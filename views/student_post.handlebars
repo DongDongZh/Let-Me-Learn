@@ -1,13 +1,22 @@
 <body id="student-post-body">
   <nav class="navbar navbar-dark bg-dark">
     <!-- Navbar content -->
-    <a href="/students" class="fas fa-home"></a>
-    <a href="/teachers">
-      <button class="btn btn-primary" type="submit">Browse Members</button>
-    </a>
-    <div class="col-6"></div>
+    <div class="col-lg-1 md-1 float-left">
+      <a href="/students" class="fas fa-home"></a>
+    </div>
+    <div class="col-lg-2 md-1 float-left">
+      <a href="/teachers">
+        <button class="btn btn-primary" type="submit">Browse Members</button>
+      </a>
+    </div>
+    <div class="col-lg-2 md-1 float-left">
+      <a href="/student_post">
+        <button class="btn btn-primary" type="submit">Create Post</button>
+      </a>
+    </div>
+    <div class="col-lg-5"></div>
     <!-- google logout -->
-    <div class="col-2">
+    <div class="col-lg-2 md-2">
       <div class="rounded float-right">
         <a href="/auth/logout">
           <button class="btn btn-primary" type="submit">Logout</button>
@@ -46,7 +55,7 @@
       </div>
       <input class="btn btn-primary" type="submit" value="Submit" id="studentSubmit">
     </form>
-  <br>
+    <br>
   </div>
   </div>
   <footer class="navbar navbar-dark bg-dark fixed-bottom justify-content-center">

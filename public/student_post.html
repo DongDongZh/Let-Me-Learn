@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Student Page--Browse All Teachers</title>
+  <title>Let Me Learn</title>
   <!-- link to Bootstrap css -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -15,7 +15,7 @@
   <!-- link to Google fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&amp;display=swap" rel="stylesheet">
   <!-- link to our css -->
-  <link rel="stylesheet" type="text/css" href="./styles/teacher_borwse.css">
+  <link rel="stylesheet" type="text/css" href="./styles/styles.css">
   <link rel="stylesheet" type="text/css" href="./styles/student.css">
 </head>
 
@@ -43,16 +43,37 @@
         </a>
       </div>
     </nav>
-    <!-- teacher profiles -->
-    <div id="pageContainer" class="container_teacher container">
-
+    <div class="container mt-3 student_form">
+      <form>
+        <div class="form-group">
+          <label for="postTitle">Title</label>
+          <input type="text" class="form-control" id="postTitle" placeholder="Title">
+        </div>
+        <div class="form-group">
+          <label for="categorySelect">Category</label>
+          <select class="form-control" id="categorySelect">
+            <option>Sports</option>
+            <option>Education</option>
+            <option>Trades</option>
+            <option>Random</option>
+            <option>Art</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="aboutPost">A few words to explain.</label>
+          <textarea class="form-control" id="aboutPost" rows="10"></textarea>
+        </div>
+        <input class="btn btn-primary" type="submit" value="Submit" id="studentSubmit">
+      </form>
     </div>
-    <footer class="navbar navbar-light bg-primary fixed-bottom justify-content-center">©LML</footer>
-    <!-- Bootstrap js -->
-    <script src="https://code.jquery.com/jquery-3.4.1.js"
-      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <!-- our js -->
-    <script src="./js/teacherBrowse.js"></script>
+  </div>
+  <footer class="navbar navbar-light bg-primary fixed-bottom justify-content-center">©LML</footer>
+  <!-- Bootstrap js -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+  <!-- our js -->
+  <script src="./js/studentPost.js"></script>
+
 </body>
 
 </html>
