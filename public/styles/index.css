@@ -159,6 +159,9 @@ img {
     width: 50%;
     margin-bottom: 5%;
   }
+  .card{
+    width: 100%;
+  }
 }
 
 /* nav */
