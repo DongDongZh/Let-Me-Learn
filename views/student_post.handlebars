@@ -1,25 +1,30 @@
-<body>
+<body id="student-post-body">
   <nav class="navbar navbar-dark bg-dark">
     <!-- Navbar content -->
     <a href="/students" class="fas fa-home"></a>
     <a href="/teachers">
-      <button class="btn btn-primary" type="submit">Browse Teachers</button>
+      <button class="btn btn-primary" type="submit">Browse Members</button>
     </a>
     <div class="col-6"></div>
     <!-- google logout -->
-  <div class="col-2">
-    <div class="rounded float-right">
-      <a href="/auth/logout">
-      <button class="btn btn-primary" type="submit">Logout</button>
-      </a>
+    <div class="col-2">
+      <div class="rounded float-right">
+        <a href="/auth/logout">
+          <button class="btn btn-primary" type="submit">Logout</button>
+        </a>
+      </div>
     </div>
-  </div>
   </nav>
-  <div class="container mt-3">
+  <div id="postContainer" class="container mt-3">
+    <br>
     <form>
       <div class="form-group">
         <label for="postTitle">Title</label>
         <input type="text" class="form-control" id="postTitle" placeholder="Title">
+      </div>
+      <div class="form-group">
+        <label for="postName">Name</label>
+        <input type="text" class="form-control" id="postName" placeholder="John Smith">
       </div>
       <div class="form-group">
         <label for="categorySelect">Category</label>
@@ -37,6 +42,7 @@
       </div>
       <input class="btn btn-primary" type="submit" value="Submit" id="studentSubmit">
     </form>
+  <br>
   </div>
   </div>
   <footer class="navbar navbar-dark bg-dark fixed-bottom justify-content-center">

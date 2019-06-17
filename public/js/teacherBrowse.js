@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  //ajax for gmail profile pictues
   var queryURL = "/api/teachers";
   $.ajax({
     url: queryURL,
@@ -7,7 +8,7 @@ $(document).ready(function () {
     console.log(response);
 
     for (var i = 0; i < response.length; i++) {
-
+      //Thumbnail for page/ not quite working
       console.log(response[i].name);
       // var thumb = $("<img>").addClass("rounded img-thumbnail float-right");
       // thumb.attr("src", response[i].image);

@@ -7,8 +7,11 @@ module.exports = function(sequelize, DataTypes) {
     },
     category: {
       type: DataTypes.STRING,
-      allowNull: false,
-      defaultValue: "Fake Task Category"
+      allowNull: false
+    },
+    title: {
+      type: DataTypes.STRING,
+      allowNull: false
     },
     description: {
       type: DataTypes.TEXT,
