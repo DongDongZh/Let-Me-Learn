@@ -24,15 +24,19 @@ module.exports = function (app) {
     res.redirect("/");
   });
 
-  app.get("/auth/google/callback", passport.authenticate("google"), function (
+  app.get("/auth/google/callback", passport.authenticate("google", { failureRedirect: "/" }), function (
     req,
     res
   ) {
+    req.session.token = req.user.token;
     var loggedInUser = req.user.profile;
-    console.log("Name: " + loggedInUser.displayName);
-    console.log("Email: " + loggedInUser._json.email);
-    console.log("Photo: " + loggedInUser._json.picture);
-    console.log("GoogleId: " + loggedInUser.id);
+
+    console.log("loggedInUser: " + loggedInUser);
+
+    // console.log("Name: " + loggedInUser.displayName);
+    // console.log("Email: " + loggedInUser._json.email);
+    // console.log("Photo: " + loggedInUser._json.picture);
+    // console.log("GoogleId: " + loggedInUser.id);
     // set a cookie
     app.use(function (req, res, next) {
       // check if client sent cookie
@@ -50,7 +54,6 @@ module.exports = function (app) {
       } 
       next(); // <-- important!
     });
-    req.session.token = req.user.token;
     res.redirect("/students");
   });
 

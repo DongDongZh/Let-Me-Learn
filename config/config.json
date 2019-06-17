@@ -2,13 +2,13 @@
 {
   "development": {
     "username": "root",
-    "database": "letMeLearn_db",
+    "database": "letmelearn_db",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "database": "letMeLearn_db",
+    "database": "letmelearn_db",
     "host": "localhost",
     "dialect": "mysql",
     "logging": false

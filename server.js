@@ -1,24 +1,36 @@
 require("dotenv").config();
 var express = require("express");
 var exphbs = require("express-handlebars");
-
+var passport = require("passport");
+// Require cookie packages
+var cookieParser = require("cookie-parser");
+var cookieSession = require("cookie-session");
 var db = require("./models");
 
 var app = express();
 var PORT = process.env.PORT || 3000;
 
+// START GOOGS STUFF ----------------------------------------------------------------------/
+require("./config/passport-config")(passport);
+// END GOOGLE STUFF -------------------------------------------------------------------------------/
 // Middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(passport.initialize());
 app.use(express.static("public"));
+app.use(
+  cookieSession({
+    name: "session",
+    keys: ["123"]
+  })
+);
+app.use(cookieParser());
+  
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-// START GOOGS STUFF ----------------------------------------------------------------------/
-require("./config/passport-setup.js")(app);
-require("./routes/googleRoutes/auth-routes.js")(app);
-// END GOOGLE STUFF -------------------------------------------------------------------------------/
 // Routes
+require("./routes/googleRoutes/auth-routes")(app);
 require("./routes/student-api-routes")(app);
 require("./routes/teacher-api-routes")(app);
 require("./routes/task-api-routes")(app);

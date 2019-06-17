@@ -1,23 +1,23 @@
 $(document).ready(function() {
   //ajax for gmail profile pictues
-  var queryURL = "/api/teachers";
+  // var queryURL = "/api/students";
   // var name = $("<div>").addClass("userName");
   // var thumb = $("<img>").addClass("userImg");
-  $.ajax({
-    url: queryURL,
-    method: "GET"
-  }).then(function(response) {
-    console.log(response);
+  // $.ajax({
+  //   url: queryURL,
+  //   method: "GET"
+  // }).then(function(response) {
+  //   console.log(response);
 
-    for (var i = 0; i < response.length; i++) {
-      // thumb.attr("src", response[i].image);
-      // thumb.css("width", "10%");
-      // thumb.css("height", "10%");
-      // $(".userImg").append(thumb);
-      // name.html(response[i].name);
-      // console.log(name);
-    }
-  });
+  //   for (var i = 0; i < response.length; i++) {
+  // thumb.attr("src", response[i].image);
+  // thumb.css("width", "10%");
+  // thumb.css("height", "10%");
+  // $(".userImg").append(thumb);
+  // name.html(response[i].name);
+  // console.log(name);
+  //   }
+  // });
   //ajax call for profile information
   // console.log(thumb);
 
