@@ -42,7 +42,6 @@ module.exports = function (app) {
               console.log(response);
             });
           }
-          
         });
         db.Teacher.findOne({
           where: {
@@ -71,5 +70,4 @@ module.exports = function (app) {
     )
   );
   // END GOOGLE STUFF -------------------------------------------------------------------------------/
-
 };
