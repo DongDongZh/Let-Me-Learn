@@ -21,8 +21,8 @@ describe("GET /api/tasks", function() {
   it("should find all tasks", function(done) {
     // Add some examples to the db to test with
     db.Task.bulkCreate([
-      { name: "First name", category: "First Category", description: "First Description" },
-      { name: "Second name", category: "Second Category", description: "Second Description" }
+      { name: "First name", category: "First Category", title: "First title", description: "First Description" },
+      { name: "Second name", category: "Second Category", title: "Second title", description: "Second Description" }
     ]).then(function() {
       // Request the route that returns all examples
       request.get("/api/tasks").end(function(err, res) {
@@ -41,11 +41,11 @@ describe("GET /api/tasks", function() {
 
         expect(responseBody[0])
           .to.be.an("object")
-          .that.includes({ name: "First name", category: "First Category", description: "First Description" });
+          .that.includes({ name: "First name", category: "First Category", title: "First title", description: "First Description" });
 
         expect(responseBody[1])
           .to.be.an("object")
-          .that.includes({ name: "Second name", category: "Second Category", description: "Second Description" });
+          .that.includes({ name: "Second name", category: "Second Category", title: "Second title", description: "Second Description" });
 
         // The `done` function is used to end any asynchronous tests
         done();

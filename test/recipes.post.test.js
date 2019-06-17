@@ -22,8 +22,9 @@ describe("POST /api/tasks", function() {
   it("should save a task", function(done) {
     // Create an object to send to the endpoint
     var reqBody = {
-      name: "task name",
+      name: "Student name",
       category: "task subject",
+      title: "task title",
       description: "task description"
     };
 

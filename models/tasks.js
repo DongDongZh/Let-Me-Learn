@@ -3,15 +3,17 @@ module.exports = function(sequelize, DataTypes) {
     name: {
       type: DataTypes.STRING,
       allowNull: false,
-      defaultValue: "Fake Task Name"
+      defaultValue: "Fake Student Name"
     },
     category: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
+      defaultValue: "Fake Category"
     },
     title: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
+      defaultValue: "Fake Title"
     },
     description: {
       type: DataTypes.TEXT,
