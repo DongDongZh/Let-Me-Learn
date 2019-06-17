@@ -2,26 +2,21 @@ module.exports = function(sequelize, DataTypes) {
   var Task = sequelize.define("Task", {
     name: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
+      defaultValue: "Fake Task Name"
     },
     category: {
       type: DataTypes.STRING,
-      allowNull: false
-    },
-    subject: {
-      type: DataTypes.BOOLEAN,
-      defaultValue: true
+      allowNull: false,
+      defaultValue: "Fake Task Category"
     },
     description: {
       type: DataTypes.TEXT,
       allowNull: false,
       validate: {
         min: 10
-      }
-    },
-    complete: {
-      type: DataTypes.BOOLEAN,
-      defaultValue: false
+      },
+      defaultValue: "Fake Task Description"
     }
   });
 
