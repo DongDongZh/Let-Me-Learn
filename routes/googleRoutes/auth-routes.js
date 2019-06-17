@@ -24,7 +24,7 @@ module.exports = function (app) {
     res.redirect("/");
   });
 
-  app.get(__dirname, "/auth/google/callback", passport.authenticate("google"), function (
+  app.get("/auth/google/callback", passport.authenticate("google"), function (
     req,
     res
   ) {
