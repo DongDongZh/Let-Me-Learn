@@ -16,6 +16,9 @@ $(function() {
         .trim(),
       description: $("#aboutPost")
         .val()
+        .trim(),
+      email: $("#postEmail")
+        .val()
         .trim()
     };
     // Checking for all feilds are filled in
