@@ -17,9 +17,9 @@ module.exports = function (app) {
     new GoogleStrategy(
       {
         //options for google api
-        clientID: process.env.GOOGLECLIENTID,
-        clientSecret: process.env.GOOGLECLIENTSECRET,
-        callbackURL: process.env.GOOGLEURL
+        clientID: process.env.GOOGLE_CLIENT_ID,
+        clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+        callbackURL: process.env.GOOGLE_URL
       },
       function (accessToken, refreshToken, profile, done) {
         //search to see if user exists

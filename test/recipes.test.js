@@ -3,14 +3,14 @@ var chaiHttp = require("chai-http");
 var server = require("../server");
 var db = require("../models");
 var expect = chai.expect;
-require("../models/student.js");
+require("../models/tasks.js");
 
 // Setting up the chai http plugin
 chai.use(chaiHttp);
 
 var request;
 
-describe("GET /api/students", function() {
+describe("GET /api/tasks", function() {
   // Before each test begins, create a new request server for testing
   // & delete all examples from the db
   beforeEach(function() {
@@ -18,14 +18,14 @@ describe("GET /api/students", function() {
     return db.sequelize.sync({ force: true });
   });
 
-  it("should find all students", function(done) {
+  it("should find all tasks", function(done) {
     // Add some examples to the db to test with
-    db.Student.bulkCreate([
-      { name: "First Example", email: "fakeEmail@fakeEmail.com", description: "First Description", rating: 5 },
-      { name: "First Example", email: "fakeEmail@fakeEmail.com", description: "First Description", rating: 5 }
+    db.Task.bulkCreate([
+      { name: "First name", category: "First Category", title: "First title", description: "First Description" },
+      { name: "Second name", category: "Second Category", title: "Second title", description: "Second Description" }
     ]).then(function() {
       // Request the route that returns all examples
-      request.get("/api/students").end(function(err, res) {
+      request.get("/api/tasks").end(function(err, res) {
         var responseStatus = res.status;
         var responseBody = res.body;
 
@@ -41,11 +41,11 @@ describe("GET /api/students", function() {
 
         expect(responseBody[0])
           .to.be.an("object")
-          .that.includes({ name: "First Example", email: "fakeEmail@fakeEmail.com", description: "First Description", rating: 5 });
+          .that.includes({ name: "First name", category: "First Category", title: "First title", description: "First Description" });
 
         expect(responseBody[1])
           .to.be.an("object")
-          .that.includes({ name: "First Example", email: "fakeEmail@fakeEmail.com", description: "First Description", rating: 5 });
+          .that.includes({ name: "Second name", category: "Second Category", title: "Second title", description: "Second Description" });
 
         // The `done` function is used to end any asynchronous tests
         done();

@@ -2,11 +2,13 @@ module.exports = function(sequelize, DataTypes) {
   var Student = sequelize.define("Student", {
     name: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
+      defaultValue: "John Doe"
     },
     email: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
+      defaultValue: "fakeEmail@email.com"
     },
     description: {
       type: DataTypes.TEXT,
@@ -18,11 +20,13 @@ module.exports = function(sequelize, DataTypes) {
     },
     image: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
+      defaultValue: "https://via.placeholder.com/150"
     },
     googleId: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
+      defaultValue: "fake googleId"
     }
   });
 
