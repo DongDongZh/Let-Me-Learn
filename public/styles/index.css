@@ -42,6 +42,7 @@ html {
 .card-header {
   font-size: 35px;
   text-transform:capitalize;
+  font-weight: bold;
 }
 
 .card-title{
