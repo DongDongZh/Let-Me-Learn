@@ -1,7 +1,7 @@
 # Project-2 Let Me Learn 
 
 ### Link to Let Me Learn 
-https://let-me-learn.herokuapp.com/
+https://rocky-tor-86904.herokuapp.com/
 
 ### Team Members
 - Blake M.
