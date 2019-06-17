@@ -4,7 +4,7 @@ module.exports = function (app) {
     res.render("index");
   });
 
-  // Load example page and pass in an example by id
+  // This request finds all Tasks with the Student associated and displays to the page
   app.get("/students", function (req, res) {
     res.render("student_homepage");
   });
@@ -28,6 +28,8 @@ module.exports = function (app) {
   app.get("/student_post", function (req, res) {
     res.render("student_post");
   });
+
+  //  This request grabs all teachers and their 
   app.get("/teachers", function (req, res) {
     res.render("teacher_browse");
   });

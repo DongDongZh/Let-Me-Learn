@@ -3,7 +3,7 @@ var chaiHttp = require("chai-http");
 var server = require("../server");
 var db = require("../models");
 var expect = chai.expect;
-require("../models/student.js");
+require("../models/tasks.js");
 
 
 // Setting up the chai http plugin
@@ -11,7 +11,7 @@ chai.use(chaiHttp);
 
 var request;
 
-describe("POST /api/students", function() {
+describe("POST /api/tasks", function() {
   // Before each test begins, create a new request server for testing
   // & delete all examples from the db
   beforeEach(function() {
@@ -19,18 +19,18 @@ describe("POST /api/students", function() {
     return db.sequelize.sync({ force: true });
   });
 
-  it("should save a student", function(done) {
+  it("should save a task", function(done) {
     // Create an object to send to the endpoint
     var reqBody = {
-      name: "student name",
-      email: "student email",
-      description: "student description",
-      rating: 0,
+      name: "Student name",
+      category: "task subject",
+      title: "task title",
+      description: "task description"
     };
 
     // POST the request body to the server
     request
-      .post("/api/students")
+      .post("/api/tasks")
       .send(reqBody)
       .end(function(err, res) {
         var responseStatus = res.status;
