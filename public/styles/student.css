@@ -1,0 +1,25 @@
+html{
+  background: url("./img/noisy_grid_@2X.png") repeat center center fixed; 
+}
+
+.student_form{
+  margin-top:50em; 
+}
+
+.containers{
+  background: url("./img/noisy_grid_@2X.png") repeat center center fixed; 
+  margin-bottom:5em; 
+}
+
+#pageContainer{
+  margin-bottom:55em; 
+  margin-top: 1em; 
+}
+
+.container{
+  margin-top: 1em; 
+}
+
+footer{
+  color:white; 
+}
