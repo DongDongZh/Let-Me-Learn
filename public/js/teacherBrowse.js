@@ -1,6 +1,6 @@
 $(document).ready(function () {
   //ajax for gmail profile pictues
-  var queryURL = "/api/teachers";
+  var queryURL = "/api/members";
   $.ajax({
     url: queryURL,
     method: "GET"

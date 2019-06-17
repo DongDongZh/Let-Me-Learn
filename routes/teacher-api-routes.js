@@ -2,10 +2,10 @@ var db = require("../models");
 
 module.exports = function(app) {
   // Get all teachers
-  app.get("/api/teachers", function(req, res) {
-    db.Teacher.findAll({}).then(function(dbTeachers) {
-      console.log(dbTeachers);
-      res.json(dbTeachers);
+  app.get("/api/members", function(req, res) {
+    db.Student.findAll({}).then(function(dbStudent) {
+      console.log(dbStudent);
+      res.json(dbStudent);
     });
   });
   // Get one teachers and their students

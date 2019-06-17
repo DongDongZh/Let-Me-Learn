@@ -6,6 +6,13 @@ var passport = require("passport");
 var cookieParser = require("cookie-parser");
 var cookieSession = require("cookie-session");
 var db = require("./models");
+// var Travis = require("travis-ci");
+// eslint-disable-next-line no-unused-vars
+// var travis = new Travis({
+//   version: "2.0.0",
+//   pro: true
+// });
+
 
 var app = express();
 var PORT = process.env.PORT || 3000;

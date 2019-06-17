@@ -30,7 +30,7 @@ module.exports = function (app) {
   });
 
   //  This request grabs all teachers and their 
-  app.get("/teachers", function (req, res) {
+  app.get("/members", function (req, res) {
     res.render("teacher_browse");
   });
   // app.get("/teachers/:id", function (req, res) {
