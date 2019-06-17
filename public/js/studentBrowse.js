@@ -46,7 +46,7 @@ $(document).ready(function() {
       cardTitle.text(response[i].category);
       cardText.text(response[i].description);
       cardUserName.text("posted by " + response[i].name);
-      cardCreatedAt.text("Created At " + response.createdAt)
+      cardCreatedAt.text("Created At " + response[i].createdAt)
       cardEmail.text("Teach Me!");
       cardEmail.attr("href", "mailto:" + response[i].email + "?subject=Let me Learn");
       // console.log(Moment(response.createdAt).format("MMM Do YY"));
