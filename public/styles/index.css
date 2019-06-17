@@ -40,7 +40,22 @@ html {
 }
 
 .card-header {
-  font-size: 35px
+  font-size: 35px;
+  text-transform:capitalize;
+}
+
+.card-title{
+  font-size: 20px;
+
+}
+.card-cardUserName{
+  float: right;
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+.card-text{
+  font-size: 20px;
 }
 
 .card-email {
@@ -77,6 +92,17 @@ img {
   background-color: #ffffffbe;
   width: 25%;
   margin-bottom: 5%;
+}
+
+#postContainer{
+  width: 50%;
+  background: rgba(89, 178, 255, 0.795);
+  margin-bottom: 50px;
+}
+
+
+#student-post-body{
+ background: #75131300; 
 }
 
 #g-btn {
