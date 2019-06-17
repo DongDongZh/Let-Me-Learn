@@ -5,6 +5,7 @@ var db = require("../models");
 
 module.exports = function (app) {
   app.use(passport.initialize());
+  app.use(passport.session());
  
   passport.serializeUser(function (user, done) {
     done(null, user);
@@ -21,12 +22,6 @@ module.exports = function (app) {
         callbackURL: process.env.GOOGLEURL
       },
       function (accessToken, refreshToken, profile, done) {
-        //pass call back func
-        // console.log("passport call back fired");
-        // console.log(profile.displayName);
-        // console.log(profile._json.email);
-        // console.log(profile._json.picture);
-        // console.log(profile.id);
         //search to see if user exists
         db.Student.findOne({
           where: {
@@ -47,11 +42,30 @@ module.exports = function (app) {
               console.log(response);
             });
           }
+          
         });
-        // return done to go to call back 
-        return done(null, {
-          profile: profile,
-          token: accessToken
+        db.Teacher.findOne({
+          where: {
+            googleId: profile.id
+          }
+        }).then(function(existingTeacher) {
+          if (existingTeacher) {
+            console.log(existingTeacher.name + "already a teacher.");
+          }else {
+            db.Teacher.create({
+              name: profile.displayName,
+              email: profile._json.email,
+              image: profile._json.picture,
+              googleId: profile.id
+            }).then(function (response) {
+              console.log(response);
+            });
+          }
+          // return done to go to call back 
+          return done(null, {
+            profile: profile,
+            token: accessToken
+          });
         });
       }
     )

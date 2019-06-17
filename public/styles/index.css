@@ -1,16 +1,105 @@
+/* styles throgh all pages */
 
-html { 
-  background: url("./img/landing_page_background.png") no-repeat center center fixed; 
+html {
+  background: url("./img/landing_page_background.png") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-
 }
 
-body{
- background-color: rgba(255, 255, 255, 0.836);
- margin-top: 20vh;
+.index {
+  background-color: rgba(255, 255, 255, 0);
+  margin-top: 20vh;
 }
 
+.index_page {
+  background-image: url(assets/email-pattern.png);
+}
 
+.fa-home {
+  color: white;
+}
+
+.card_teacher {
+  width: 18em;
+}
+
+.text {
+  color: whitesmoke;
+}
+
+.card {
+  display: inline-block;
+  float: left;
+  margin: 0.25em;
+  width: 45%;
+  -webkit-box-shadow: 0 8px 6px -6px black;
+  -moz-box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 6px -6px black;
+}
+
+.card-header {
+  font-size: 35px
+}
+
+.card-email {
+  background-color: #59B2FF;
+  padding: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 5%;
+  margin-bottom: 5px;
+  display: block;
+  text-align: center;
+}
+
+.card-email:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 40px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-email:active {
+  transform: scale(.96);
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-header {
+  display: block;
+  text-align: center;
+}
+
+#landing_container {
+  background-color: #ffffffbe;
+  width: 25%;
+  margin-bottom: 5%;
+}
+
+#g-btn {
+  color: #494949 !important;
+  text-transform: uppercase;
+  background: #ffffff;
+  padding: 20px;
+  border: 4px solid #494949 !important;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+#g-btn:hover {
+  color: #ffffff !important;
+  background: #59B2FF;
+  border-color: #59B2FF !important;
+  transition: all 0.4s ease 0s;
+}
+
+@media only screen and (max-width: 600px) {
+  #landing_container {
+    background-color: #ffffffbe;
+    width: 50%;
+    margin-bottom: 5%;
+  }
+}

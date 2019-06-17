@@ -15,47 +15,8 @@
   <!-- link to Google fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&amp;display=swap" rel="stylesheet">
   <!-- link to our css -->
-  <link rel="stylesheet" type="text/css" href="./styles/styles.css">
-</head>
-
-<body>
-  <nav class="navbar navbar-dark bg-primary">
-    <!-- Navbar content -->
-    <a href="./teacher_browse.html">
-      <button class="btn btn-primary" type="submit">Browse Teachers</button>
-    </a>
-    <a href="./student_homepage.html">
-      <button class="btn btn-primary" type="submit">Browse Posts</button>
-    </a>
-    <div class="col-6"></div>
-    <!-- google headshots -->
-    <div class="col-2">
-      <img src="..." class="rounded img-thumbnail float-right" alt="...">
-    </div>
-  </nav>
-  <div class="container mt-3">
-    <form>
-      <div class="form-group">
-        <label for="postTitle">Title</label>
-        <input type="text" class="form-control" id="postTitle" placeholder="Title">
-      </div>
-      <div class="form-group">
-        <label for="categorySelect">Category</label>
-        <select class="form-control" id="categorySelect">
-          <option>Sports</option>
-          <option>Education</option>
-          <option>Trades</option>
-          <option>Random</option>
-          <option>Art</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="aboutPost">A few words to explain.</label>
-        <textarea class="form-control" id="aboutPost" rows="10"></textarea>
-      </div>
-    </form>
-  </div>
-  <footer class="navbar navbar-light bg-primary fixed-bottom justify-content-center">©LML</footer>
+  {{!-- <link rel="stylesheet" type="text/css" href="./styles/teacher_borwse.css"> --}}
+  <link rel="stylesheet" type="text/css" href="./styles/index.css">
   <!-- Bootstrap js -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -66,9 +27,10 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
-  <!-- our js -->
-  <script src="./js/studentPost.js"></script>
+</head>
 
+<body>
+  {{{ body }}}
 </body>
 
 </html>

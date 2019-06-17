@@ -18,12 +18,13 @@ $(function () {
     else {
       $.ajax("/api/tasks", {
         type: "POST",
-        data: newTask
+        data: newTask,      
       }).then(function (result) {
         console.log("Created new task");
         console.log(result);
         // Reload the page to get the updated list
         location.reload();
+        window.location.href = "/students";
       });
     }
   });

@@ -1,80 +1,65 @@
-var db = require("../models");
-var path = require("path");
-require("./googleRoutes/auth-routes.js");
-
 module.exports = function (app) {
   // Load index page
   app.get("/", function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/index.html"));
+    res.render("index");
   });
 
   // Load example page and pass in an example by id
   app.get("/students", function (req, res) {
-    res.sendFile(path.join(__dirname, "/../public/student_homepage.html"));
-    db.Student.findAll({}).then(function (dbStudent) {
-      res.json(dbStudent);
-    });
+    res.render("student_homepage");
   });
-  app.get("/students/:id", function (req, res) {
-    res.sendFile(path.join(__dirname, "/../public/student_browse.html"));
-    db.Student.findOne({ where: { id: req.params.id } }).then(function (
-      dbStudent
-    ) {
-      res.render("student_browse", {
-        student: dbStudent
-      });
-    });
-  });
-  app.get("/students_browse", function (req, res) {
-    res.sendFile(path.join(__dirname, "/../public/student_homepage.html"));
-    db.Teacher.findAll({}).then(function (dbTeacher) {
-      res.json(dbTeacher);
-    });
-  });
+  // app.get("/students/:id", function (req, res) {
+  //   res.sendFile(path.join(__dirname, "/../public/student_browse.html"));
+  //   db.Student.findOne({ where: { id: req.params.id } }).then(function (
+  //     dbStudent
+  //   ) {
+  //     res.render("student_browse", {
+  //       student: dbStudent
+  //     });
+  //   });
+  // });
+  // app.get("/students_browse", function (req, res) {
+  //   res.sendFile(path.join(__dirname, "/../public/student_homepage.html"));
+  //   db.Teacher.findAll({}).then(function (dbTeacher) {
+  //     res.json(dbTeacher);
+  //   });
+  // });
 
-  app.get("/student_posts", function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/student_post.html"));
-    db.Student.Task.findAll({}).then(function (dbTask) {
-      res.render("student_browse", {
-        task: dbTask
-      });
-    });
+  app.get("/student_post", function (req, res) {
+    res.render("student_post");
   });
   app.get("/teachers", function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/teacher_homepage.html"));
-    db.Teacher.findAll({}).then(function (dbTeacher) {
-      res.json(dbTeacher);
-    });
+    res.render("teacher_browse");
   });
-  app.get("/teachers/:id", function (req, res) {
-    res.sendFile(path.join(__dirname, "/../public/teacher_browse.html"));
-    db.Teacher.findOne({ where: { id: req.params.id } }).then(function (
-      dbTeacher
-    ) {
-      res.render("teacher_browse", {
-        teacher: dbTeacher
-      });
-    });
-  });
+  // app.get("/teachers/:id", function (req, res) {
+  //   res.sendFile(path.join(__dirname, "/../public/teacher_browse.html"));
+  //   db.Teacher.findOne({ where: { id: req.params.id } }).then(function (
+  //     dbTeacher
+  //   ) {
+  //     res.render("teacher_browse", {
+  //       teacher: dbTeacher
+  //     });
+  //   });
+  // });
 
-  app.get("/teacher_post/", function (req, res) {
+  // app.get("/teacher_post/", function (req, res) {
 
-    res.sendFile(path.join(__dirname, "/../public/teacher_post.html"));
-    // db.Example.findOne({ where: { id: req.params.id } }).then(function(
-    //   dbExample
-    // ) {
-    //   res.render("example", {
-    //     example: dbExample
-    //   });
-    // });
-  });
+  //   res.sendFile(path.join(__dirname, "/../public/teacher_post.html"));
+  //   // db.Example.findOne({ where: { id: req.params.id } }).then(function(
+  //   //   dbExample
+  //   // ) {
+  //   //   res.render("example", {
+  //   //     example: dbExample
+  //   //   });
+  //   // });
+  // });
 
   // Render 404 page for any unmatched routes
   // app.get("*", function(req, res) {
   //   res.sendFile("../public/404.html");
   // });
-  app.get("/teacher_profile", function (req, res) {
-    res.sendFile(path.join(__dirname, "/../public/teacher_profiles.html"));
-  }); 
+  // app.get("/teacher_profile", function (req, res) {
+  //   res.sendFile(path.join(__dirname, "/../public/teacher_profiles.html"));
+  // }); 
 };
 
