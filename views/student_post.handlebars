@@ -3,23 +3,27 @@
     <!-- Navbar content -->
     <a href="/students" class="fas fa-home"></a>
     <a href="/teachers">
-      <button class="btn btn-primary" type="submit">Browse Teachers</button>
+      <button class="btn btn-primary" type="submit">Browse Members</button>
     </a>
     <div class="col-6"></div>
     <!-- google logout -->
-  <div class="col-2">
-    <div class="rounded float-right">
-      <a href="/auth/logout">
-      <button class="btn btn-primary" type="submit">Logout</button>
-      </a>
+    <div class="col-2">
+      <div class="rounded float-right">
+        <a href="/auth/logout">
+          <button class="btn btn-primary" type="submit">Logout</button>
+        </a>
+      </div>
     </div>
-  </div>
   </nav>
   <div class="container mt-3">
     <form>
       <div class="form-group">
         <label for="postTitle">Title</label>
         <input type="text" class="form-control" id="postTitle" placeholder="Title">
+      </div>
+      <div class="form-group">
+        <label for="postName">Name</label>
+        <input type="text" class="form-control" id="postName" placeholder="John Smith">
       </div>
       <div class="form-group">
         <label for="categorySelect">Category</label>

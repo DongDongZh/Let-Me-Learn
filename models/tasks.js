@@ -8,9 +8,9 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false
     },
-    subject: {
-      type: DataTypes.BOOLEAN,
-      defaultValue: true
+    title: {
+      type: DataTypes.STRING,
+      allowNull: false
     },
     description: {
       type: DataTypes.TEXT,
