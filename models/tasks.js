@@ -22,6 +22,11 @@ module.exports = function(sequelize, DataTypes) {
         min: 10
       },
       defaultValue: "Fake Task Description"
+    },
+    email: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      defaultValue: "Fake Email" 
     }
   });
 
