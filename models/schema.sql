@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS letMeLearn_db;
+DROP DATABASE IF EXISTS letmelearn_db;
 
-CREATE DATABASE letMeLearn_db;
+CREATE DATABASE letmelearn_db;
