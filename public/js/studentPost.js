@@ -1,3 +1,13 @@
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
 // When the studentSubmit button is clicked, send student post data to server.
 $(function() {
   $("#studentSubmit").on("click", function(event) {

@@ -1,28 +1,14 @@
-<nav class="navbar navbar-dark bg-dark">
-  <!-- Navbar content -->
-  <div class="col-lg-1 md-1 float-left">
-    <a href="/students" class="fas fa-home"></a>
-  </div>
-  <div class="col-lg-2 md-1 float-left">
-    <a href="/teachers">
-      <button class="btn btn-primary" type="submit">Browse Members</button>
-    </a>
-  </div>
-  <div class="col-lg-2 md-1 float-left">
-    <a href="/student_post">
-      <button class="btn btn-primary" type="submit">Create Post</button>
-    </a>
-  </div>
-  <div class="col-lg-5"></div>
-  <!-- google logout -->
-  <div class="col-lg-2 md-2">
-    <div class="rounded float-right">
-      <a href="/auth/logout">
-        <button class="btn btn-primary" type="submit">Logout</button>
-      </a>
-    </div>
-  </div>
-</nav>
+{{!-- new nav bar --}}
+<div class="topnav" id="myTopnav">
+  <a href="/students" class=" fas fa-home active"></a>
+  <a href="/teachers">Browse Members</a>
+  <a href="/student_post">Create Post</a>
+  <a href="/auth/logout" class="float-right">Logout</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
 <!-- posts -->
 <div id="pageContainer" class="container align=center">
 </div>
