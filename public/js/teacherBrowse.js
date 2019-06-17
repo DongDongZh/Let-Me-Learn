@@ -18,16 +18,16 @@ $(document).ready(function () {
       var cardDiv = $("<div>").addClass("card");
       var cardHeader = $("<div>").addClass("card-header");
       var cardBody = $("<div>").addClass("card-body");
-      var cardTitle = $("<h5>").addClass("card-title");
       var cardText = $("<img>").addClass("card-text");
+      var cardEmail = $("<h5>").addClass("card-email");
 
       cardHeader.text(response[i].name);
-      cardTitle.text(response[i].email);
+      cardEmail.text(response[i].email);
       cardText.attr("src", response[i].image);
       cardText.css("width", "30%");
       cardText.css("height", "30%");
 
-      cardBody.append([cardTitle, cardText]);
+      cardBody.append([cardText, cardEmail]);
       cardDiv.append([cardHeader, cardBody]);
       $("#pageContainer").prepend(cardDiv);
     
