@@ -1,37 +1,42 @@
 <body>
-  <div class="containers">
-    <!-- headers of student browse page (student view)-->
-    <nav class="navbar navbar-dark bg-dark">
-      <!-- Navbar content -->
+  <!-- headers of student browse page (student view)-->
+  <nav class="navbar navbar-dark bg-dark">
+    <!-- Navbar content -->
+    <div class="col-lg-1 md-1 float-left">
       <a href="/students" class="fas fa-home"></a>
-      <a href="/students">
-        <button class="btn btn-primary" type="submit">Browse Posts</button>
+    </div>
+    <div class="col-lg-2 md-1 float-left">
+      <a href="/teachers">
+        <button class="btn btn-primary" type="submit">Browse Members</button>
       </a>
+    </div>
+    <div class="col-lg-2 md-1 float-left">
       <a href="/student_post">
         <button class="btn btn-primary" type="submit">Create Post</button>
       </a>
-      <div class="col-6"></div>
-       <!-- google logout -->
-  <div class="col-2">
-    <div class="rounded float-right">
-      <a href="/auth/logout">
-      <button class="btn btn-primary" type="submit">Logout</button>
-      </a>
     </div>
-  </div>
-    </nav>
-    <!-- teacher profiles -->
-    <div id="pageContainer" class="container_teacher container">
-
-    </div>
-    <footer class="navbar navbar-dark bg-dark fixed-bottom justify-content-center">
-      <div class="text">
-        ©LML
+    <div class="col-lg-5"></div>
+    <!-- google logout -->
+    <div class="col-lg-2 md-2">
+      <div class="rounded float-right">
+        <a href="/auth/logout">
+          <button class="btn btn-primary" type="submit">Logout</button>
+        </a>
       </div>
-    </footer>
-    <!-- Bootstrap js -->
-    <script src="https://code.jquery.com/jquery-3.4.1.js"
-      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <!-- our js -->
-    <script src="/js/teacherBrowse.js"></script>
+    </div>
+  </nav>
+  <!-- teacher profiles -->
+  <div id="pageContainer" class="container_teacher container">
+
+  </div>
+  <footer class="navbar navbar-dark bg-dark fixed-bottom justify-content-center">
+    <div class="text">
+      ©LML
+    </div>
+  </footer>
+  <!-- Bootstrap js -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+  <!-- our js -->
+  <script src="/js/teacherBrowse.js"></script>
 </body>
