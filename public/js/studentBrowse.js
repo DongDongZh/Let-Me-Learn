@@ -35,7 +35,6 @@ $(document).ready(function() {
       var cardTitle = $("<h5>").addClass("card-title");
       var cardText = $("<div>").addClass("card-text");
       var cardUserName = $("<div>").addClass("card-cardUserName");
-      var cardCreatedAt = $("<div>").addClass("card-createdAt");
       var cardEmail = $("<a>").addClass("btn btn-primary card-email");
       // var cardImg = $("<div>").addClass("card-img");
       // var cardUserName = $("<div>").addClass("card-img");
@@ -45,18 +44,17 @@ $(document).ready(function() {
       cardHeader.text(response[i].title);
       cardTitle.text(response[i].category);
       cardText.text(response[i].description);
-      cardUserName.text("posted by " + response[i].name);
-      cardCreatedAt.text("Created At " + response[i].createdAt)
+      cardUserName.text("Posted At " + moment(response[i].createdAt).format("MMMM Do YYYY, h:mm:ss a") + " by " + response[i].name);
       cardEmail.text("Teach Me!");
       cardEmail.attr("href", "mailto:" + response[i].email + "?subject=Let me Learn");
-      // console.log(Moment(response.createdAt).format("MMM Do YY"));
+      // console.log(Moment(response[i].createdAt).format("MMM Do YY"));
       
       // cardImg.html(thumb);
       // cardUserName.text(name);
 
       // putting all card info together
       // cardImg.append(cardBody);
-      cardBody.append([cardTitle, cardText, cardEmail, cardCreatedAt, cardUserName]);
+      cardBody.append([cardTitle, cardText, cardEmail, cardUserName]);
       cardDiv.append([cardHeader, cardBody]);
       $("#pageContainer").prepend(cardDiv);
     }
