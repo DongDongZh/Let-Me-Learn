@@ -19,7 +19,7 @@ module.exports = function (app) {
         //options for google api
         clientID: process.env.GOOGLE_CLIENT_ID,
         clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-        callbackURL: (__dirname, "/auth/google/callback")
+        callbackURL: ("https://rocky-tor-86904.herokuapp.com/auth/google/callback")
       },
       function (accessToken, refreshToken, profile, done) {
         //search to see if user exists
