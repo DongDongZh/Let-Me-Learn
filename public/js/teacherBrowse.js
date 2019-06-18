@@ -31,10 +31,11 @@ $(document).ready(function () {
       var cardHeader = $("<div>").addClass("card-header");
       var cardBody = $("<div>").addClass("card-body");
       var cardText = $("<img>").addClass("card-text");
-      var cardEmail = $("<h5>").addClass("card-email");
+      var cardEmail = $("<a>").addClass("card-email");
 
       cardHeader.text(response[i].name);
       cardEmail.text(response[i].email);
+      cardEmail.attr("href", "mailto:" + response[i].email + "?subject=Let me Learn");
       cardText.attr("src", response[i].image);
       cardText.css("width", "30%");
       cardText.css("height", "30%");
