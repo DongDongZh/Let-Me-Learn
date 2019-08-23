@@ -1,4 +1,4 @@
-# Project-2 Let Me Learn 
+# Let Me Learn 
 
 ### Link to Let Me Learn 
 https://rocky-tor-86904.herokuapp.com/
